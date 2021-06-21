@@ -368,15 +368,15 @@ class _WelcomePageState extends State<WelcomePage> {
   Future<Map> get(String dat, String mnt) async {
     try {
       await http.get(
-          Uri.parse("https://numbersapi.p.rapidapi.com/" +
+          //    take numbersapi from rapidapi website its a free api
+          Uri.parse(" your rapid api url " +
               mnt +
               "/" +
               dat +
               "/date?fragment=true&json=true"),
           headers: {
-            "x-rapidapi-key":
-                "8b6b646719msh3ef91bb12a9bb30p10e84fjsn126c38b8e506",
-            "x-rapidapi-host": "numbersapi.p.rapidapi.com"
+            "x-rapidapi-key": "your rapidapi key",
+            "x-": " your rapidapi host "
           }).then((response) {
         print(response.statusCode);
         if (response.statusCode == 200) {
